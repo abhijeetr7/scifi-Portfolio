@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijeet R. Patil - Portfolio</title>
+    <!-- Use Tailwind CSS for a modern, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2e64e5;
+            /* Neon Blue */
+            --secondary-color: #b8f2e6;
+            /* Soft Teal */
+            --background-dark: #0a0a1a;
+            /* Deep Space Blue */
+            --text-light: #e0e0f0;
+            /* Faint Star White */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* Gradient for titles */
+        .text-gradient {
+            background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Subtle pulsating glow effect for active sections or important text */
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+            }
+            50% {
+                box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color);
+            }
+        }
+        
+        /* Subtle blinking cursor animation for the typing effect */
+        .typing-cursor {
+            font-size: 1.25em;
+            animation: blink-cursor 0.75s step-end infinite;
+        }
+
+        @keyframes blink-cursor {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animated grid background effect */
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(to right, rgba(46, 100, 229, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(46, 100, 229, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: pan-grid 60s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes pan-grid {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 50px 50px;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="relative min-h-screen">
+    <div class="grid-bg"></div>
+
+    <!-- Main Container -->
+    <main class="container mx-auto p-4 md:p-8 relative z-10">
+
+        <!-- Header - Mission Log -->
+        <header class="text-center my-10 fade-in">
+            <h1 id="title" class="orbitron text-3xl md:text-5xl lg:text-6xl text-gradient font-bold mb-2"></h1>
+            <p id="subtitle" class="orbitron text-sm md:text-lg text-gray-400">Abhijeet Patil: Bridging Technology, Sustainability, and Entrepreneurial Innovation</p>
+        </header>
+
+        <!-- About Section - Mission Briefing -->
+        <section class="bg-slate-900 bg-opacity-70 backdrop-blur-sm rounded-3xl p-6 md:p-10 mb-8 border border-slate-700 shadow-lg fade-in">
+            <h2 class="orbitron text-xl md:text-3xl text-gradient font-bold mb-4">
+                <i class="fas fa-terminal mr-2 text-primary-color"></i> Mission Briefing
+            </h2>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                Abhijeet Patil is a dynamic IT professional, serial entrepreneur, and emerging tech innovator driven by a dual passion for sustainable energy solutions and transformative technology. Currently honing his expertise at Raviesha Tech LLP, he leverages his technical foundation to pioneer ventures that merge digital innovation with real-world impact.
+            </p>
+        </section>
+
+        <!-- RenewaTech Section - Command Center -->
+        <section class="bg-slate-900 bg-opacity-70 backdrop-blur-sm rounded-3xl p-6 md:p-10 mb-8 border border-slate-700 shadow-lg fade-in">
+            <h2 class="orbitron text-xl md:text-3xl text-gradient font-bold mb-4">
+                <i class="fas fa-seedling mr-2 text-primary-color"></i> RenewaTech Command Center
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-primary-color transition-colors duration-300">
+                    <h3 class="text-lg font-semibold text-secondary-color mb-2">Vision & Mission</h3>
+                    <p class="text-gray-400">
+                        As the founder of RenewaTech, Abhijeet is spearheading a mission to democratize clean energy. RenewaTech embodies his commitment to making renewable energy accessible, efficient, and future-ready.
+                    </p>
+                </div>
+                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-primary-color transition-colors duration-300">
+                    <h3 class="text-lg font-semibold text-secondary-color mb-2">Key Services</h3>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1">
+                        <li>Strategic Project Setup & Consulting</li>
+                        <li>Smart Automation & Tech Integration</li>
+                        <li>Energy Audits & System Optimization</li>
+                        <li>Scalable Sustainability Planning</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- DevStruggleSaga Section - Development Log -->
+        <section class="bg-slate-900 bg-opacity-70 backdrop-blur-sm rounded-3xl p-6 md:p-10 mb-8 border border-slate-700 shadow-lg fade-in">
+            <h2 class="orbitron text-xl md:text-3xl text-gradient font-bold mb-4">
+                <i class="fas fa-code mr-2 text-primary-color"></i> #DevStruggleSaga Log
+            </h2>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                Abhijeet is actively expanding his technical prowess through a rigorous 100-day Full-Stack Development challenge. Under his creator identity <span class="text-secondary-color font-bold">@DevStruggleSaga</span> on Instagram, he transparently documents this journey—sharing coding breakthroughs, debugging struggles, and insights. His content inspires a growing community of learners by demystifying the path to tech proficiency.
+            </p>
+        </section>
+
+        <!-- Content Creator Section - Communications Relay -->
+        <section class="bg-slate-900 bg-opacity-70 backdrop-blur-sm rounded-3xl p-6 md:p-10 mb-8 border border-slate-700 shadow-lg fade-in">
+            <h2 class="orbitron text-xl md:text-3xl text-gradient font-bold mb-4">
+                <i class="fas fa-satellite-dish mr-2 text-primary-color"></i> Communications Relay
+            </h2>
+            <div class="flex flex-wrap justify-around gap-4 md:gap-8 text-center">
+                <a href="https://quora.com/profile/Abhijeet-R-Patil" target="_blank" class="w-20 md:w-28 p-4 rounded-xl hover:bg-slate-800 transition-colors duration-300 group">
+                    <i class="fab fa-quora text-4xl text-gray-400 group-hover:text-primary-color transition-colors"></i>
+                    <p class="mt-2 text-sm text-gray-400 group-hover:text-text-light">Quora</p>
+                </a>
+                <a href="https://dev.to/imjeetrs" target="_blank" class="w-20 md:w-28 p-4 rounded-xl hover:bg-slate-800 transition-colors duration-300 group">
+                    <i class="fab fa-dev text-4xl text-gray-400 group-hover:text-primary-color transition-colors"></i>
+                    <p class="mt-2 text-sm text-gray-400 group-hover:text-text-light">Dev.to</p>
+                </a>
+                <a href="https://medium.com/@imjeetrs" target="_blank" class="w-20 md:w-28 p-4 rounded-xl hover:bg-slate-800 transition-colors duration-300 group">
+                    <i class="fab fa-medium text-4xl text-gray-400 group-hover:text-primary-color transition-colors"></i>
+                    <p class="mt-2 text-sm text-gray-400 group-hover:text-text-light">Medium</p>
+                </a>
+                <a href="https://linkedin.com/in/imjeetrs" target="_blank" class="w-20 md:w-28 p-4 rounded-xl hover:bg-slate-800 transition-colors duration-300 group">
+                    <i class="fab fa-linkedin-in text-4xl text-gray-400 group-hover:text-primary-color transition-colors"></i>
+                    <p class="mt-2 text-sm text-gray-400 group-hover:text-text-light">LinkedIn</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Core Passions Section - Core Protocols -->
+        <section class="bg-slate-900 bg-opacity-70 backdrop-blur-sm rounded-3xl p-6 md:p-10 mb-8 border border-slate-700 shadow-lg fade-in">
+            <h2 class="orbitron text-xl md:text-3xl text-gradient font-bold mb-4">
+                <i class="fas fa-brain mr-2 text-primary-color"></i> Core Protocols & Vision
+            </h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300 text-sm md:text-base">
+                <li class="bg-slate-800 rounded-xl p-4 border border-slate-700">
+                    <i class="fas fa-leaf mr-2 text-secondary-color"></i> Sustainability & Tech
+                </li>
+                <li class="bg-slate-800 rounded-xl p-4 border border-slate-700">
+                    <i class="fas fa-rocket mr-2 text-secondary-color"></i> Entrepreneurship
+                </li>
+                <li class="bg-slate-800 rounded-xl p-4 border border-slate-700">
+                    <i class="fas fa-user-astronaut mr-2 text-secondary-color"></i> Personal Branding
+                </li>
+                <li class="bg-slate-800 rounded-xl p-4 border border-slate-700">
+                    <i class="fas fa-redo-alt mr-2 text-secondary-color"></i> Continuous Learning
+                </li>
+            </ul>
+        </section>
+
+        <!-- Key Strengths Section - Strengths Matrix -->
+        <section class="bg-slate-900 bg-opacity-70 backdrop-blur-sm rounded-3xl p-6 md:p-10 mb-8 border border-slate-700 shadow-lg fade-in">
+            <h2 class="orbitron text-xl md:text-3xl text-gradient font-bold mb-4">
+                <i class="fas fa-list-ol mr-2 text-primary-color"></i> Key Strengths Matrix
+            </h2>
+            <ul class="list-none space-y-4 text-gray-300 text-sm md:text-base">
+                <li class="p-3 bg-slate-800 rounded-xl border border-slate-700 hover:border-secondary-color transition-colors duration-300 flex items-center">
+                    <i class="fas fa-puzzle-piece mr-4 text-secondary-color"></i>
+                    Multidisciplinary Expertise: <span class="ml-2 text-gray-400">IT professional + Renewable Energy Entrepreneur + Full-Stack Developer</span>
+                </li>
+                <li class="p-3 bg-slate-800 rounded-xl border border-slate-700 hover:border-secondary-color transition-colors duration-300 flex items-center">
+                    <i class="fas fa-users mr-4 text-secondary-color"></i>
+                    Community Building: <span class="ml-2 text-gray-400">Inspiring learners through transparent documentation (#DevStruggleSaga)</span>
+                </li>
+                <li class="p-3 bg-slate-800 rounded-xl border border-slate-700 hover:border-secondary-color transition-colors duration-300 flex items-center">
+                    <i class="fas fa-lightbulb mr-4 text-secondary-color"></i>
+                    Thought Leadership: <span class="ml-2 text-gray-400">Content spanning tech, sustainability, and business strategy</span>
+                </li>
+                <li class="p-3 bg-slate-800 rounded-xl border border-slate-700 hover:border-secondary-color transition-colors duration-300 flex items-center">
+                    <i class="fas fa-hands-helping mr-4 text-secondary-color"></i>
+                    Impact-Driven Vision: <span class="ml-2 text-gray-400">Scalable solutions for global challenges (RenewaTech)</span>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer - System Status -->
+    <footer class="text-center p-4 text-gray-500 text-xs md:text-sm mt-8">
+        <p>System Status: Online | Abhijeet R. Patil v2.0</p>
+    </footer>
+
+    <!-- JavaScript for the typing effect -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Function to simulate typing text
+            async function typeSentence(sentence, eleRef, delay = 50) {
+                const letters = sentence.split("");
+                let i = 0;
+                while (i < letters.length) {
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    eleRef.append(letters[i]);
+                    i++;
+                }
+                return;
+            }
+
+            const titleEle = document.getElementById('title');
+            const subtitleEle = document.getElementById('subtitle');
+            
+            // Wait for the title to finish typing before showing the subtitle
+            typeSentence("PROJECT: ABHIJEET PATIL", titleEle).then(() => {
+                subtitleEle.style.opacity = 1;
+            });
+        });
+    </script>
+</body>
+
+</html>
